@@ -7,5 +7,4 @@ def deleteOutlier(int_list):
     Returns:
         [list of int] -- [outlier deleted list]
     """
-    
-    return modified_list
+    return [x for x in int_list if 10<=x and x<=20]
