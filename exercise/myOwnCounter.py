@@ -12,8 +12,16 @@ def myOwnCounter(filename):
     
     Returns:
         [int] -- [result]
+
     """
-    
+    file_list = readInputTextFile(filename)
+
+    deleted_outlier = deleteOutlier(file_list)
+
+    remain = remainOddOrEven(deleted_outlier)
+
+    num_of_uniq = countNumOfUnique(remain)
+
     return num_of_uniq
 
 if __name__ == '__main__':
