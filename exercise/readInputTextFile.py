@@ -7,5 +7,14 @@ def readInputTextFile(filename):
     Returns:
         [list of int] -- [input list]
     """
+
+    f = open(filename,'r')
+
+    read = f.readline()
+    res = read.split(" ")
+
+    res = list(map(lambda x: int(x), res))
     
-    return int_list
+    return res
+
+print(readInputTextFile('input_ex.txt'))
